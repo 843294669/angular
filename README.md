@@ -28,4 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 我们使用 git 或 svn 进行代码管理时不会提交 node_models 里的包，主要是因为包太大，当我们进行项目迁移时也不会同时拷贝这些包文件，那如何解决 node_models 依赖包缺少的问题？
 可用下面的命令安装所有依赖包：
+
 ```cnpm install --scripts-prepend-node-path=auto```
