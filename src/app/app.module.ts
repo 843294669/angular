@@ -2,7 +2,7 @@
 // import { CommonModule } from '@angular/common';
 // import { RouterOutlet } from '@angular/router';
 // import { BrowserModule } from '@angular/platform-browser'; 
-// import { DemoComponent } from './demo/demo.component';
+// import { DemoComponent } from './child/child.component';
 // import { AppComponent } from './home/app.component';
 
 // @NgModule({

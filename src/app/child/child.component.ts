@@ -6,11 +6,11 @@ import { FormsModule } from '@angular/forms';
 
 // metadata defines the properties
 @Component({
-  selector: 'demo',
+  selector: 'child',
   standalone: true,
   imports: [CommonModule, FormsModule, RouterOutlet],
-  templateUrl: './demo.component.html',
-  styleUrl: './demo.component.scss'
+  templateUrl: './child.component.html',
+  styleUrl: './child.component.scss'
 })
 export class DemoComponent {
   value: String = "jacob";
