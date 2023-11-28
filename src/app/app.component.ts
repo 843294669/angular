@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
-import { ChildComponent } from '../child/child.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 // metadata defines the properties
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ChildComponent, RouterLink, RouterLinkActive, RouterOutlet],
-  templateUrl: './parent.component.html',
-  styleUrl: './parent.component.scss'
+  imports: [ParentComponent, ChildComponent, RouterLink, RouterLinkActive, RouterOutlet],
+  templateUrl: './app.component.html',
 })
-export class ParentComponent {
+export class AppComponent {
+  title = 'Angular';
 }

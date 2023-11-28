@@ -1,9 +1,9 @@
 // 导入 Component 写法
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
-import { ParentComponent } from './app/parent/parent.component';
+import { AppComponent } from './app/app.component';
 
-bootstrapApplication(ParentComponent, appConfig)
+bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
 
 
