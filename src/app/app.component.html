@@ -1,5 +1,5 @@
 <nav>
-    <div><a routerLink="/parent-component" routerLinkActive="active" ariaCurrentWhenActive="page">parent component</a></div>
-    <div><a routerLink="/child-component" routerLinkActive="active" ariaCurrentWhenActive="page">child component</a></div>
+    <div><a [routerLink]="['/parent-component', title]" routerLinkActive="active" ariaCurrentWhenActive="page">parent component</a></div>
+    <div><a routerLink="/child-component" [queryParams]="{'title': title}" routerLinkActive="active" ariaCurrentWhenActive="page">child component</a></div>
 </nav>
 <router-outlet></router-outlet>
