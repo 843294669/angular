@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './child.component.html',
   styleUrl: './child.component.scss'
 })
-export class DemoComponent {
+export class ChildComponent {
   value: String = "jacob";
   changeValue: String = "";
   onChange = () => {

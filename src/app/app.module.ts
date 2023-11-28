@@ -2,15 +2,15 @@
 // import { CommonModule } from '@angular/common';
 // import { RouterOutlet } from '@angular/router';
 // import { BrowserModule } from '@angular/platform-browser'; 
-// import { DemoComponent } from './child/child.component';
-// import { AppComponent } from './home/app.component';
+// import { ChildComponent } from './child/child.component';
+// import { ParentComponent } from './home/app.component';
 
 // @NgModule({
-//     declarations: [DemoComponent, AppComponent],
+//     declarations: [ChildComponent, ParentComponent],
 //     imports: [CommonModule, BrowserModule, RouterOutlet],
 //     providers: [],
-//     //exports: [DemoComponent],
-//     bootstrap: [AppComponent]
+//     //exports: [ChildComponent],
+//     bootstrap: [ParentComponent]
 // })
 
 // export class AppModule {
