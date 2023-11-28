@@ -4,11 +4,11 @@ import { ParentComponent } from './parent/parent.component';
 
 export const routes: Routes = [
     {
-        path: 'parent-component', 
+        path: 'parent-component/:title',
         component: ParentComponent
     },
     { 
-        path: 'child-component', 
+        path: 'child-component',
         component: ChildComponent
      }
 ];
