@@ -12,16 +12,18 @@ import { AppService } from '../app.service';
 })
 
 export class ChildComponent {
-
+  
   constructor(private route: ActivatedRoute, private service: AppService) {
-    console.log(service.getData());
+    service.getData().subscribe(resp => this.JsonData = resp);
+    // service.getData().subscribe(resp => this.JsonData = JSON.parse(JSON.stringify(resp)));
   }
   // 接收父组件传值
   @Input() title: String = '';
   @Output() emitter = new EventEmitter<String>();
-
+  
   value: String = "";
   changeValue: String = "";
+  JsonData: Object = {};
 
   onChange = () => {
     this.changeValue = this.value;
