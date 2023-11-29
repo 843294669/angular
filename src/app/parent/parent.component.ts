@@ -24,7 +24,9 @@ export class ParentComponent {
     // this.title = this.route.snapshot.params["title"];
     // router path params
     this.route.params.subscribe({
-      next: (v) => {console.log(v['title']); this.title = v['title']},
+      next: (v) => {
+        this.title = v['title'];
+      },
       error: (e) => console.error(e),
       complete: () => console.info('complete')
     });
