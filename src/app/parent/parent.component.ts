@@ -1,21 +1,22 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ChildComponent } from '../child/child.component';
 
 // metadata defines the properties
 @Component({
   selector: 'parent',
-  standalone: true,
-  imports: [CommonModule, ChildComponent, RouterOutlet],
+  standalone: false,
+  // imports: [CommonModule, ChildComponent, RouterOutlet],
   templateUrl: './parent.component.html',
   styleUrl: './parent.component.scss'
 })
-// 构造函数中实例化
 
 export class ParentComponent {
+
+  constructor(public route: ActivatedRoute) { }
+
   title: String = '';
+
+  // 构造函数中实例化
   ngOnInit() {
     // query params
     // this.title = this.route.snapshot.queryParams["title"];
@@ -28,5 +29,5 @@ export class ParentComponent {
       complete: () => console.info('complete')
     });
   }
-  constructor(public route: ActivatedRoute) { }
+
 }

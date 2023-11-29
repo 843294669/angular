@@ -1,19 +1,19 @@
-
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms'; 
 import { ActivatedRoute } from '@angular/router';
 
 // metadata defines the properties
 @Component({
   selector: 'child',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterOutlet],
+  standalone: false,
+  // imports: [CommonModule, FormsModule, RouterOutlet],
   templateUrl: './child.component.html',
   styleUrl: './child.component.scss'
 })
+
 export class ChildComponent {
+  
+  constructor(private route: ActivatedRoute) { }
+
   value: String = "";
   changeValue: String = "";
   onChange = () => {
@@ -31,5 +31,5 @@ export class ChildComponent {
       complete: () => console.info('complete')
     });
   }
-  constructor(public route: ActivatedRoute) { }
+
 }
