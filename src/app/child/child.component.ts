@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Input } from '@angular/core';
 
 // metadata defines the properties
 @Component({
@@ -16,10 +15,15 @@ export class ChildComponent {
   constructor(private route: ActivatedRoute) { }
   // 接收父组件传值
   @Input() title: String = '';
+  @Output() emitter = new EventEmitter<String>();
+
   value: String = "";
   changeValue: String = "";
+
   onChange = () => {
     this.changeValue = this.value;
+    // 向父组件传值
+    this.emitter.emit(this.value);
   }
   ngOnInit() {
     // query params

@@ -32,4 +32,8 @@ export class ParentComponent {
     });
   }
 
+  receiveChild(title: String) {
+    this.title = title;
+  }
+
 }

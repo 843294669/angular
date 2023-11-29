@@ -152,8 +152,9 @@
     </div>
   </div>
 </main>
-<!--[title] 定义子组件需要接受的参数名称，"title"为父组件属性名称-->
-<child [title]="title"></child>
+<!--父传子：[title]: 子组件需要接受的参数名称，"title": 父组件属性名称-->
+<!--子传父：(emitter): 子组件属性名称，$event: 接收的事件名称-->
+<child [title]="title" (emitter)="this.title = $event"></child>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
@@ -161,3 +162,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<router-outlet></router-outlet>
