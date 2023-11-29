@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AppService } from '../app.service';
 
 // metadata defines the properties
 @Component({
@@ -12,7 +13,9 @@ import { ActivatedRoute } from '@angular/router';
 
 export class ChildComponent {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private service: AppService) {
+    console.log(service.getData());
+  }
   // 接收父组件传值
   @Input() title: String = '';
   @Output() emitter = new EventEmitter<String>();
