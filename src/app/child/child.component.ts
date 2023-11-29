@@ -14,7 +14,7 @@ import { AppService } from '../app.service';
 export class ChildComponent {
   
   constructor(private route: ActivatedRoute, private service: AppService) {
-    service.getData().subscribe(resp => this.JsonData = resp);
+    service.getData().subscribe(resp => this.data = resp.name + "," + resp.age);
     // service.getData().subscribe(resp => this.JsonData = JSON.parse(JSON.stringify(resp)));
   }
   // 接收父组件传值
@@ -23,7 +23,7 @@ export class ChildComponent {
   
   value: String = "";
   changeValue: String = "";
-  JsonData: Object = {};
+  data: any;
 
   onChange = () => {
     this.changeValue = this.value;

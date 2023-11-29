@@ -9,7 +9,7 @@ export class AppService {
         
     }
 
-    getData(): Observable<Object> {
+    getData(): Observable<any> {
         return this.httpCilent.get("../assets/data/data.json");
     }
 }
